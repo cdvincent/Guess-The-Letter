@@ -4,6 +4,7 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 var guess = [];
+var randomLetter;
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -12,14 +13,13 @@ var prevGuesses = document.getElementById("prevGuesses-text");
 
 
 
-var randomLetter = letter[Math.floor(Math.random()*letter.length)];
+randomLetter = letter[Math.floor(Math.random()*letter.length)];
 console.log(randomLetter)
 
-
 var newLetter = function(){
-    var randomLetter = letter[Math.floor(Math.random()*letter.length)];
     guessesLeft = 10;
     guess = [];
+    randomLetter = letter[Math.floor(Math.random()*letter.length)];
     console.log(randomLetter)
 }
 
