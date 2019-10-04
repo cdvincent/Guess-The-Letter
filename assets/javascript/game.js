@@ -2,8 +2,6 @@ var letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "
 
 var wins = 0;
 var losses = 0;
-var guessesLeft = 10;
-var guess = [];
 var randomLetter;
 
 var winsText = document.getElementById("wins-text");
@@ -12,26 +10,25 @@ var guessesLeftText = document.getElementById("guessesLeft-text");
 var prevGuesses = document.getElementById("prevGuesses-text");
 
 
+newLetter();
 
-randomLetter = letter[Math.floor(Math.random()*letter.length)];
-console.log(randomLetter)
 
-var newLetter = function(){
+
+function newLetter(){
     guessesLeft = 10;
-    guess = [];
+    guesses = "";
     randomLetter = letter[Math.floor(Math.random()*letter.length)];
     console.log(randomLetter)
 }
-
-
 
 document.onkeyup = function(event){
     
     guessesLeft--;
     
-    var guess = event.key.toLowerCase();
+    let guess = event.key.toLowerCase();
     console.log(guess)
     
+    guesses = guesses + guess + ", ";
     
     if (guess === randomLetter){
         wins++;
@@ -41,21 +38,11 @@ document.onkeyup = function(event){
         losses++;
         newLetter();
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
+    
     winsText.textContent = "Wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
     guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
-    prevGuesses.textContent = "Previous Guesses: " + guess;
+    prevGuesses.textContent = "Previous Guesses: " + guesses;
     
 }
