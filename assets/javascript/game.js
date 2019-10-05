@@ -21,12 +21,18 @@ function newLetter(){
     console.log(randomLetter)
 }
 
+
+
 document.onkeyup = function(event){
-    
+
+    if (event.keyCode >= 65 && event.keyCode <= 90){
+   
     guessesLeft--;
+
     
     let guess = event.key.toLowerCase();
     console.log(guess)
+
     
     guesses = guesses + guess + ", ";
     
@@ -39,10 +45,9 @@ document.onkeyup = function(event){
         newLetter();
     }
 
-    
     winsText.textContent = "Wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
     guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
     prevGuesses.textContent = "Previous Guesses: " + guesses;
-    
+} else alert("please enter a letter")
 }

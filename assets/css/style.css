@@ -1,0 +1,47 @@
+body {
+    background-image: url("../images/abc.png");
+    background-size: 34%;
+}
+
+h1 {
+    background-color: tan;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    font-size: 45px;
+    height: 80px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-style: dashed;
+    border-color: white;
+    
+}
+
+.stats {
+    border-style: solid;
+    background-color: cyan;
+    float: left;
+    width: 31.5%;
+    height: 100px;
+    border-color: #4aaaa5;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: mediumpurple;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.guesses {
+    padding-left: 250px;
+    padding-top: 75px;
+    height: 100px;
+    width: 83%;
+    background-color: palevioletred;
+    display: inline-block;
+    text-align: left;
+    border-color: white;
+    border-style: solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
